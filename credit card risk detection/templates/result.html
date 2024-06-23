@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        .form{
+         background: #fff;
+
+            padding: 20px;
+            max-width: 500px;
+
+            margin-top:20%;
+            margin-left:40%;
+            border-radius: 8px;
+
+
+        }
+    </style>
+</head>
+<body>
+<div class="form">
+    {% if prediction is not none %}
+    <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+</div>
+</body>
+</html>

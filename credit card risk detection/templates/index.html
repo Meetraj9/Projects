@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .form-container {
+            background: #fff;
+            padding: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-group input[type="number"],
+        .form-group select {
+            width: 95%;
+            padding: 10px;
+
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            color: #333;
+
+        }
+
+        .form-group input[type="number"]:focus,
+        .form-group select:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        .submit-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-left:40%;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+
+    <h1 class="h1">Enter your details for prediction</h1>
+    <form method="post" action="/predict">
+        <div class="form-group">
+
+         <label for="Gender">Gender:</label>
+        <select id="Gender" name="Gender" required>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+        </select><br><br>
+        </div>
+
+        <div class="form-group">
+        <label for="Age">Enter Your Age:</label>
+        <input type="number" id="Age" name="Age" required><br><br>
+        </div>
+
+         <div class="form-group">
+
+        <label for="Income">Enter Annual Income:</label>
+        <input type="number" id="Income" name="Income" required><br><br>
+        </div>
+
+        <div class="form-group">
+
+        <label for="Employment_length">Enter Employment length in years:</label>
+        <input type="number" id="Employment_length" name="Employment_length" required><br><br>
+        </div>
+
+        <div class="form-group">
+
+        <label for="Employment_status">Enter Employment status:</label>
+        <select id="Employment_status" name="Employment_status" required>
+            <option value="Commercial associate">Commercial associate</option>
+            <option value="Pensioner">Pensioner</option>
+            <option value="State servant">State servant</option>
+            <option value="Student">Student</option>
+            <option value="Working">Working</option>
+        </select><br><br>
+        </div>
+        <div class="form-group">
+
+        <label for="Dwelling">Enter your Residence:</label>
+        <select id="Dwelling" name="Dwelling" required>
+            <option value="Co-op apartment">Co-op apartment</option>
+            <option value="House / apartment">House / apartment</option>
+            <option value="Municipal apartment">Municipal apartment</option>
+            <option value="Office apartment">Office apartment</option>
+            <option value="Rented apartment">Rented apartment</option>
+            <option value="With parents">With parents</option>
+        </select><br><br>
+        </div>
+
+         <div class="form-group">
+        <label for="Education_level">Enter your Education level:</label>
+        <select id="Education_level" name="Education_level" required>
+            <option value="Academic degree">Academic degree</option>
+            <option value="Higher education">Higher education</option>
+            <option value="Incomplete higher">Incomplete higher</option>
+            <option value="Lower secondary">Lower secondary</option>
+            <option value="Secondary / secondary special">Secondary / secondary special</option>
+        </select><br><br>
+        </div>
+
+        <div class="form-group">
+
+        <label for="Marital_status">Enter Marital status:</label>
+        <select id="Marital_status" name="Marital_status" required>
+            <option value="Civil marriage">Civil marriage</option>
+            <option value="Married">Married</option>
+            <option value="Separated">Separated</option>
+            <option value="Single / not married">Single / not married</option>
+            <option value="Widow">Widow</option>
+        </select><br><br>
+        </div>
+
+
+        <div class="form-group">
+        <label for="Family_member_count">Enter total number of Family members:</label>
+        <input type="number" id="Family_member_count" name="Family_member_count" required><br><br>
+        </div>
+
+        <div class="form-group">
+
+        <label for="Has_a_car">Do you own a CAR:</label>
+        <select id="Has_a_car" name="Has_a_car" required>
+            <option value="Y">YES</option>
+            <option value="N">NO</option>
+        </select><br><br>
+        </div>
+
+        <div class="form-group">
+        <label for="Has_a_property">DO yoy own a Property:</label>
+        <select id="Has_a_property" name="Has_a_property" required>
+            <option value="Y">YES</option>
+            <option value="N">NO</option>
+        </select><br><br>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+    </div>
+</body>
+</html>
